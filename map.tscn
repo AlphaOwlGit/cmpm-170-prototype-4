@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://6adv5vibvwbo"]
+[gd_scene load_steps=7 format=3 uid="uid://6adv5vibvwbo"]
 
-[ext_resource type="Script" path="res://Interact/Interactable.gd" id="1_l8ldg"]
+[ext_resource type="Script" path="res://map.gd" id="1_6ykau"]
 [ext_resource type="Texture2D" uid="uid://cws3pa7t3ch3v" path="res://icon.svg" id="2_vqyej"]
+[ext_resource type="AudioStream" uid="uid://chbjpup2ls0g" path="res://assets/half-life-button.mp3" id="3_mgpt2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qtmrr"]
 albedo_texture = ExtResource("2_vqyej")
@@ -14,7 +15,7 @@ size = Vector2(1, 1)
 size = Vector3(0.1, 1, 1)
 
 [node name="Map" type="StaticBody3D"]
-script = ExtResource("1_l8ldg")
+script = ExtResource("1_6ykau")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
@@ -22,3 +23,8 @@ mesh = SubResource("PlaneMesh_d5mm6")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_5hm1n")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_mgpt2")
+
+[connection signal="interacted" from="." to="." method="_on_interacted"]

@@ -5,7 +5,7 @@ const JUMP_VELOCITY = 4.5
 
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var neck := $Neck
-@onready var camera := $Neck/Camera3D
+@onready var camera := $Neck/PlayerCamera
 @onready var ray := $Neck/InteractRay
 
 func _unhandled_input(event: InputEvent) -> void:
