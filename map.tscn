@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://6adv5vibvwbo"]
+[gd_scene load_steps=14 format=3 uid="uid://6adv5vibvwbo"]
 
 [ext_resource type="Script" path="res://Interact/Interactable.gd" id="1_anx7j"]
-[ext_resource type="Texture2D" uid="uid://co41eowv2f8ft" path="res://assets/map.png" id="2_ve0ew"]
+[ext_resource type="Texture2D" uid="uid://bvchray2gk8lh" path="res://assets/map.png" id="2_ve0ew"]
 [ext_resource type="Texture2D" uid="uid://cws3pa7t3ch3v" path="res://icon.svg" id="2_vqyej"]
-[ext_resource type="AudioStream" uid="uid://2umneujp33so" path="res://assets/half-life-button.mp3" id="3_mgpt2"]
+[ext_resource type="AudioStream" uid="uid://delnyawkiooaw" path="res://assets/half-life-button.mp3" id="3_mgpt2"]
+[ext_resource type="Script" path="res://key_3d.gd" id="5_5nx4e"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2lo44"]
 albedo_texture = ExtResource("2_ve0ew")
@@ -18,6 +19,20 @@ size = Vector2(1, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_5hm1n"]
 size = Vector3(0.1, 1, 1)
 
+[sub_resource type="BoxMesh" id="BoxMesh_2qsgp"]
+size = Vector3(0.8, 0.3, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k6uxt"]
+size = Vector3(0.8, 0.3, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_51saw"]
+radius = 0.1
+height = 0.5
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_og6oh"]
+radius = 0.3
+height = 1.0
+
 [node name="Map" type="StaticBody3D"]
 script = ExtResource("1_anx7j")
 
@@ -31,5 +46,25 @@ shape = SubResource("BoxShape3D_5hm1n")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("3_mgpt2")
+
+[node name="Lockbox3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 6.5, 2.7, 0.25)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Lockbox3D"]
+mesh = SubResource("BoxMesh_2qsgp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lockbox3D"]
+shape = SubResource("BoxShape3D_k6uxt")
+
+[node name="Key3D" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 5, 0)
+disable_mode = 2
+script = ExtResource("5_5nx4e")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Key3D"]
+mesh = SubResource("CapsuleMesh_51saw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Key3D"]
+shape = SubResource("CapsuleShape3D_og6oh")
 
 [connection signal="interacted" from="." to="." method="_on_interacted"]
