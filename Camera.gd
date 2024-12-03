@@ -7,7 +7,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_just_pressed("interact"):
-		$MapCamera.set_current(true)
-	else:
-		$PlayerCamera.set_current(true)	
+	pass
+
+func on_interacted():
+	print("hello")
