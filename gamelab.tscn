@@ -869,3 +869,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.564433, -1.11257, -5.80955)
 material_override = SubResource("StandardMaterial3D_460dy")
 use_collision = true
 size = Vector3(0.106567, 0.824463, 0.462769)
+
+[connection signal="interacted" from="Map" to="." method="_on_map_interaction"]
