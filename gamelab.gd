@@ -1,7 +1,7 @@
 extends Node3D
 
 @onready var camera1 = $MapCamera
-@onready var camera2 = $CharacterBody3D/Neck/PlayerCamera
+@onready var camera2 = $Player/Neck/PlayerCamera
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

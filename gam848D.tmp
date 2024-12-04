@@ -887,13 +887,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.85008, -1.32104, -2.97624)
 
 [node name="Key3D" parent="Keys/Key" index="0"]
 disable_mode = 1
-gravity_scale = 0.0
-
-[node name="CollisionShape3D" parent="Keys/Key/Key3D" index="1"]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
 
 [node name="KeyIndi" type="CSGBox3D" parent="Keys/Key/Key3D" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.66261, 0.526809, 2.42264)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.66261, 0.61814, 2.91016)
 size = Vector3(0.0281982, 0.045166, 0.0476685)
 material = SubResource("StandardMaterial3D_rpxxo")
 
@@ -902,13 +898,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.81969, -0.639732, 5.67061)
 
 [node name="Key3D" parent="Keys/Key2" index="0"]
 disable_mode = 1
-gravity_scale = 0.0
-
-[node name="CollisionShape3D" parent="Keys/Key2/Key3D" index="1"]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
 
 [node name="KeyIndi2" type="CSGBox3D" parent="Keys/Key2/Key3D" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.63222, -0.0631722, -5.73669)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.63222, -0.154503, -6.22421)
 size = Vector3(0.0281982, 0.045166, 0.0476685)
 material = SubResource("StandardMaterial3D_rpxxo")
 
@@ -916,15 +908,10 @@ material = SubResource("StandardMaterial3D_rpxxo")
 transform = Transform3D(1, 0, 0, 0, 0.840519, 0.541782, 0, -0.541782, 0.840519, -0.524451, -1.20655, -5.77036)
 
 [node name="Key3D" parent="Keys/Key3" index="0"]
-transform = Transform3D(0.0290054, 0.989696, 0.140218, -0.847329, 0.0987614, -0.521805, -0.530277, -0.103676, 0.841462, 0.118331, -0.0752568, -0.0473986)
 disable_mode = 1
-gravity_scale = 0.0
-
-[node name="CollisionShape3D" parent="Keys/Key3/Key3D" index="1"]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
 
 [node name="KeyIndi3" type="CSGBox3D" parent="Keys/Key3/Key3D" index="2"]
-transform = Transform3D(0.0290054, -0.999489, 0.0133595, 0.989695, 0.0268412, -0.140648, 0.140218, 0.0173014, 0.989969, -0.693475, 3.46873, 5.59549)
+transform = Transform3D(1, 0, 0, 0, 0.84052, -0.541782, 0, 0.541782, 0.84052, 4.33698, -2.19426, 5.32067)
 size = Vector3(0.0281982, 0.045166, 0.0476685)
 material = SubResource("StandardMaterial3D_rpxxo")
 
@@ -932,15 +919,10 @@ material = SubResource("StandardMaterial3D_rpxxo")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.961333, -1.32104, -3.69168)
 
 [node name="Key3D" parent="Keys/Key4" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0211908, 0.354353, 0)
 disable_mode = 1
-gravity_scale = 0.0
-
-[node name="CollisionShape3D" parent="Keys/Key4/Key3D" index="1"]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
 
 [node name="KeyIndi4" type="CSGBox3D" parent="Keys/Key4/Key3D" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8512, 0.665577, 3.08839)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8512, 1.01964, 3.34172)
 size = Vector3(0.0281982, 0.045166, 0.0476685)
 material = SubResource("StandardMaterial3D_rpxxo")
 
@@ -949,13 +931,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.69406, -1.32104, 0.877336)
 
 [node name="Key3D" parent="Keys/Key5" index="0"]
 disable_mode = 1
-gravity_scale = 0.0
-
-[node name="CollisionShape3D" parent="Keys/Key5/Key3D" index="1"]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
 
 [node name="KeyIndi5" type="CSGBox3D" parent="Keys/Key5/Key3D" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.11847, 1.01964, -1.2273)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.11847, 0.960594, -1.48063)
 size = Vector3(0.0281982, 0.045166, 0.0476685)
 material = SubResource("StandardMaterial3D_rpxxo")
 
@@ -964,13 +942,9 @@ transform = Transform3D(0.0383006, 0.999099, 0.0182766, 0, 0.0182901, -0.999833,
 
 [node name="Key3D" parent="Keys/Key6" index="0"]
 disable_mode = 1
-gravity_scale = 0.0
-
-[node name="CollisionShape3D" parent="Keys/Key6/Key3D" index="1"]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
 
 [node name="KeyIndi6" type="CSGBox3D" parent="Keys/Key6/Key3D" index="2"]
-transform = Transform3D(0.0383006, 2.97805e-08, -0.999266, 0.999099, 0.0182901, 0.0382942, 0.0182766, -0.999833, 0.000700491, 4.2387, 0.622725, -1.30426)
+transform = Transform3D(0.0383006, 4.49894e-11, -0.999266, 0.999099, 0.01829, 0.0382942, 0.0182766, -0.999833, 0.000700521, 4.8239, 0.59492, -1.01063)
 size = Vector3(0.0281982, 0.045166, 0.0476685)
 material = SubResource("StandardMaterial3D_rpxxo")
 
@@ -979,10 +953,6 @@ transform = Transform3D(1, 0, 0, 0, 6.98129e-05, -1, 0, 1, 6.98129e-05, 3.57706,
 
 [node name="Key3D" parent="Keys/Key7" index="0"]
 disable_mode = 1
-gravity_scale = 0.0
-
-[node name="CollisionShape3D" parent="Keys/Key7/Key3D" index="1"]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
 
 [node name="KeyIndi7" type="CSGBox3D" parent="Keys/Key7/Key3D" index="2"]
 transform = Transform3D(1, 0, 0, 0, 6.98129e-05, 1, 0, -1, 6.98129e-05, 0.235475, 2.84514, -0.271403)
@@ -994,10 +964,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.01939, -0.684018, -5.04229)
 
 [node name="Key3D" parent="Keys/Key8" index="0"]
 disable_mode = 1
-gravity_scale = 0.0
-
-[node name="CollisionShape3D" parent="Keys/Key8/Key3D" index="1"]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
 
 [node name="KeyIndi8" type="CSGBox3D" parent="Keys/Key8/Key3D" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.793792, 0.519606, 4.33334)

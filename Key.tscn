@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfwacre12lqrt"]
+
+[ext_resource type="Script" path="res://Key.gd" id="1_umfbx"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_48iki"]
+radius = 0.1
+height = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cm8qo"]
+albedo_color = Color(1, 0, 1, 1)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bjeci"]
+radius = 0.3
+height = 1.0
+
+[node name="Key" type="Node3D"]
+
+[node name="Key3D" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0211908, 0.0593363, 0)
+disable_mode = 2
+script = ExtResource("1_umfbx")
+obj_prompt = "Pick up"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Key3D"]
+mesh = SubResource("CapsuleMesh_48iki")
+surface_material_override/0 = SubResource("StandardMaterial3D_cm8qo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Key3D"]
+shape = SubResource("CapsuleShape3D_bjeci")
+
+[connection signal="interacted" from="Key3D" to="Key3D" method="_on_interacted"]
