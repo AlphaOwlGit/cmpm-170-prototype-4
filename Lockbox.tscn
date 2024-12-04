@@ -1,18 +1,20 @@
 [gd_scene load_steps=3 format=3 uid="uid://bx5oq3p85gxlc"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_m15cg"]
-size = Vector3(0.8, 0.3, 1)
+[ext_resource type="Script" path="res://Lockbox.gd" id="1_y1lci"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ebq1k"]
-size = Vector3(0.8, 0.3, 1)
+size = Vector3(0.8, 0.3, 0.856934)
 
 [node name="Lockbox" type="Node3D"]
 
-[node name="Lockbox3D" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 1.06581e-14, 0, -1.06581e-14, 1, -0.0641266, 0.177692, -0.12251)
+[node name="Lockbox3D" type="RigidBody3D" parent="."]
+script = ExtResource("1_y1lci")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Lockbox3D"]
-mesh = SubResource("BoxMesh_m15cg")
+[node name="CSGBox3D" type="CSGBox3D" parent="Lockbox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 1.06581e-14, 0, -1.06581e-14, 1, -0.0632721, 0.178302, -0.0870486)
+use_collision = true
+size = Vector3(0.505615, 0.209229, 0.63855)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Lockbox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 1.06581e-14, 0, -1.06581e-14, 1, -0.0641266, 0.220083, -0.194043)
 shape = SubResource("BoxShape3D_ebq1k")

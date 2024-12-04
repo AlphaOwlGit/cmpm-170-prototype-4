@@ -1,7 +1,7 @@
 extends Interactable
 
-@onready var player = $Player
-@onready var indicator = $KeyIndi
+#@onready var player = $Player
+#@onready var indicator = $KeyIndi
 
 #var picked_up = false  # Whether the key is currently picked up
 #var obj = null

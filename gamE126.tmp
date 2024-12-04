@@ -897,9 +897,6 @@ disable_mode = 1
 gravity_scale = 0.0
 obj_prompt = "Deposit Key"
 
-[node name="CSGBox3D" parent="Lockbox/Lockbox3D" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 1.06581e-14, 0, -1.06581e-14, 1, -0.063272, 0.178302, -0.124911)
-
 [node name="Keys" type="Node3D" parent="."]
 
 [node name="Key" parent="Keys" groups=["grab"] instance=ExtResource("15_3f5v7")]

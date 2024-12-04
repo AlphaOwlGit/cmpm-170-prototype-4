@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
-const SPEED = 5.0
-const JUMP_VELOCITY = 4.5
+const SPEED = 3.0
+const JUMP_VELOCITY = 3.5
 
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var neck := $Neck
@@ -24,9 +24,9 @@ func _unhandled_input(event: InputEvent) -> void:
 		if event is InputEventMouseMotion:
 			neck.rotate_y(-event.relative.x * 0.01)
 			camera.rotate_x(-event.relative.y * 0.01)
-			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-30), deg_to_rad(60))
+			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-60), deg_to_rad(90))
 			ray.rotate_x(-event.relative.y * 0.01)
-			ray.rotation.x = clamp(camera.rotation.x, deg_to_rad(-30), deg_to_rad(60))
+			ray.rotation.x = clamp(camera.rotation.x, deg_to_rad(-60), deg_to_rad(90))
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
