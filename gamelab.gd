@@ -11,11 +11,3 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-
-func _on_map_interaction(body: Variant) -> void:
-	if camera2.is_current():
-		camera2.clear_current(true)
-		camera1.set_current(true)
-	elif camera1.is_current():
-		camera1.clear_current(true)
-		camera2.set_current(true)

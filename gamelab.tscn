@@ -14,8 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://2kv4xvgxt7n8" path="res://assets/texture_13.png" id="11_syatt"]
 [ext_resource type="Texture2D" uid="uid://jyfs5vlt53lo" path="res://assets/texture_01.png" id="12_a87ev"]
 [ext_resource type="Texture2D" uid="uid://cx4wphu7y3g06" path="res://assets/texture_02.png" id="13_cq3k4"]
-[ext_resource type="PackedScene" path="res://Key.tscn" id="15_3f5v7"]
-[ext_resource type="PackedScene" path="res://Lockbox.tscn" id="16_6iraf"]
+[ext_resource type="PackedScene" uid="uid://dfwacre12lqrt" path="res://Key.tscn" id="15_3f5v7"]
+[ext_resource type="PackedScene" uid="uid://bx5oq3p85gxlc" path="res://Lockbox.tscn" id="16_6iraf"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7qacm"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
