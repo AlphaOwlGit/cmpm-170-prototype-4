@@ -10,10 +10,11 @@ var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var pickup_prompt := $PickupPrompt  # Reference to a Label or UI node
 
 # Reference to the object being held
-var holding_key = null
+var key = null
 
-#func _ready():
-#	pickup_prompt.visible = false  # Hide the prompt initially
+func _ready():
+	GameState.set_value("key", null)
+	GameState.set_value("holding_key", false)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
@@ -51,28 +52,31 @@ func _physics_process(delta: float) -> void:
 
 	# Handle interactions
 	if Input.is_action_just_pressed("interact"):
-		if holding_key:
+		if GameState.get_value("holding_key"):
 			drop_key()
 		else:
 			try_pick_up_key()
 
 func try_pick_up_key():
-	if ray.is_colliding():
-		var collider = ray.get_collider()
-		if collider.name == "Key":
-			holding_key = collider
-			holding_key.freeze = true  # Stop physics on the key
-			holding_key.global_transform.origin = neck.global_transform.origin + Vector3(0, 1, 0)  # Offset above player
-			self.add_child(holding_key)  # Attach the key to the player
-			print("Picked up the key!")
+	var collider = ray.get_collider()
+	if collider and collider.name == "Key3D":
+		GameState.set_value("key", collider)
+		var key = GameState.get_value("key")
+		key.freeze = true
+		GameState.set_value("holding_key", true)
+		print(key.global_transform.origin)
+		
+		key.global_transform.origin += Vector3(0, -5, 0)  # Offset position
+		print("Picked up the key!")
 
 func drop_key():
-	if holding_key:
-		holding_key.freeze = false  # Re-enable physics for the key
-		holding_key.get_parent().remove_child(holding_key)  # Detach the key
-		holding_key.global_transform.origin += Vector3(0, -0.5, 0)  # Adjust drop position
-		print("Dropped the key!")
-		holding_key = null
+	var key = GameState.get_value("key")
+	key.global_transform.origin = neck.global_transform.origin + Vector3(0, -0.5, 0)  # Adjust drop position
+	print(key.global_transform.origin)
+	print("Dropped the key!")
+	GameState.set_value("key", null)
+	GameState.set_value("holding_key", false)
+		
 
 func _on_show_prompt(state: bool) -> void:
 	# Show or hide the pickup prompt

@@ -1368,6 +1368,7 @@ material = SubResource("StandardMaterial3D_ula40")
 script = ExtResource("22_3xkho")
 
 [connection signal="interacted" from="Map" to="." method="_on_map_interaction"]
+[connection signal="interacted" from="Lockbox/Lockbox3D" to="." method="_on_lockbox_3d_interacted"]
 
 [editable path="Lockbox"]
 [editable path="Keys/Key2"]

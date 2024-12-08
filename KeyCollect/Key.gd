@@ -8,9 +8,10 @@ extends Interactable
 #@onready var point = $"../Hold"
 
 func _on_interacted(_body:):
-	GameState.set_value("key", GameState.get_value("key") + 1)
-	print(GameState.get_value("key"))
-	queue_free()
+	pass
+	#GameState.set_value("keyNumber", GameState.get_value("keyNumber") + 1)
+	#print(GameState.get_value("keyNumber"))
+	#queue_free()
 	
 	#if not picked_up:
 	#	# Pick up the key
