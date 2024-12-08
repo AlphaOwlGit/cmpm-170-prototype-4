@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=3 uid="uid://bktkxunywodhh"]
+[gd_scene load_steps=81 format=3 uid="uid://bktkxunywodhh"]
 
 [ext_resource type="Texture2D" uid="uid://ctdvm4unyh003" path="res://assets/texture_05.png" id="1_1d2dj"]
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_il0d6"]
@@ -6,12 +6,12 @@
 [ext_resource type="Texture2D" uid="uid://4bqqqxyvi7kr" path="res://assets/texture_12.png" id="2_7crnl"]
 [ext_resource type="Texture2D" uid="uid://cra4ps7vg4b2s" path="res://assets/texture_03.png" id="2_d6h6u"]
 [ext_resource type="Texture2D" uid="uid://blaydk4q4r7rc" path="res://assets/texture_11.png" id="3_tmsol"]
-[ext_resource type="Texture2D" uid="uid://d11ba7tjsf0yt" path="res://assets/thumbs up emoji.jpg" id="3_ugfpq"]
+[ext_resource type="Texture2D" uid="uid://5glinw3l1kdf" path="res://assets/thumbs up emoji.jpg" id="3_ugfpq"]
 [ext_resource type="Texture2D" uid="uid://buvcunw3s0sdh" path="res://assets/texture_08.png" id="4_kgxj6"]
 [ext_resource type="Texture2D" uid="uid://dgn8k2s00h5q0" path="res://assets/texture_06.png" id="5_57tp1"]
-[ext_resource type="Texture2D" uid="uid://d0kdxavugcedp" path="res://assets/panda without black spots.jpg" id="5_vavko"]
+[ext_resource type="Texture2D" uid="uid://4lr5db4nkbus" path="res://assets/panda without black spots.jpg" id="5_vavko"]
 [ext_resource type="Texture2D" uid="uid://ckvfrkfnya75u" path="res://assets/texture_07.png" id="6_e1l6f"]
-[ext_resource type="Texture2D" uid="uid://b6usc6tcetwxc" path="res://assets/cat xmas.jpg" id="6_kfok4"]
+[ext_resource type="Texture2D" uid="uid://db687hnx7vm3y" path="res://assets/cat xmas.jpg" id="6_kfok4"]
 [ext_resource type="Texture2D" uid="uid://carquh70h35l1" path="res://assets/texture_10.png" id="7_wja4x"]
 [ext_resource type="PackedScene" uid="uid://cxfqs7qfqjitg" path="res://Interact/interact_ray.tscn" id="8_bsgvl"]
 [ext_resource type="PackedScene" uid="uid://6adv5vibvwbo" path="res://map.tscn" id="9_voa8d"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://cx4wphu7y3g06" path="res://assets/texture_02.png" id="13_cq3k4"]
 [ext_resource type="PackedScene" uid="uid://dfwacre12lqrt" path="res://Key.tscn" id="15_3f5v7"]
 [ext_resource type="PackedScene" uid="uid://bx5oq3p85gxlc" path="res://Lockbox.tscn" id="16_6iraf"]
+[ext_resource type="Script" path="res://KeyCollect/SecretDoor.gd" id="22_3xkho"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7qacm"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -1364,6 +1365,7 @@ material_override = SubResource("StandardMaterial3D_42534")
 use_collision = true
 size = Vector3(0.149353, 1.38208, 1)
 material = SubResource("StandardMaterial3D_ula40")
+script = ExtResource("22_3xkho")
 
 [connection signal="interacted" from="Map" to="." method="_on_map_interaction"]
 

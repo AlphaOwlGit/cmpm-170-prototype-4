@@ -6,6 +6,7 @@ func _physics_process(delta: float) -> void:
 	prompt.text = ""
 	if is_colliding():
 		var collider = get_collider()
+		prompt.text = collider.name
 		
 		if collider is Interactable:
 			prompt.text = collider.get_prompt()

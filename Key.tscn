@@ -1,6 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dfwacre12lqrt"]
 
-[ext_resource type="Script" path="res://Key.gd" id="1_umfbx"]
+[ext_resource type="Script" path="res://KeyCollect/Key.gd" id="1_umfbx"]
+
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_48iki"]
 radius = 0.05

@@ -1,6 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bx5oq3p85gxlc"]
 
-[ext_resource type="Script" path="res://Lockbox.gd" id="1_y1lci"]
+[ext_resource type="Script" path="res://KeyCollect/Lockbox.gd" id="1_y1lci"]
+
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ebq1k"]
 size = Vector3(0.8, 0.3, 0.856934)
