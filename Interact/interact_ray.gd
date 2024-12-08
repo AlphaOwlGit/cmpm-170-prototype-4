@@ -2,6 +2,8 @@ extends RayCast3D
 
 @onready var prompt = $Prompt
 
+# Old version / implementation
+
 func _physics_process(delta: float) -> void:
 	prompt.text = ""
 	if is_colliding():
@@ -13,3 +15,4 @@ func _physics_process(delta: float) -> void:
 
 			if Input.is_action_just_pressed(collider.prompt_input):
 				collider.interact(owner)
+				

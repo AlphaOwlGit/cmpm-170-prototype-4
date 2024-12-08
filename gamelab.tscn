@@ -1,27 +1,21 @@
-[gd_scene load_steps=81 format=3 uid="uid://bktkxunywodhh"]
+[gd_scene load_steps=67 format=3 uid="uid://bktkxunywodhh"]
 
 [ext_resource type="Texture2D" uid="uid://ctdvm4unyh003" path="res://assets/texture_05.png" id="1_1d2dj"]
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_il0d6"]
 [ext_resource type="Script" path="res://gamelab.gd" id="1_pa45p"]
-[ext_resource type="Texture2D" uid="uid://4bqqqxyvi7kr" path="res://assets/texture_12.png" id="2_7crnl"]
 [ext_resource type="Texture2D" uid="uid://cra4ps7vg4b2s" path="res://assets/texture_03.png" id="2_d6h6u"]
 [ext_resource type="Texture2D" uid="uid://blaydk4q4r7rc" path="res://assets/texture_11.png" id="3_tmsol"]
-[ext_resource type="Texture2D" uid="uid://5glinw3l1kdf" path="res://assets/thumbs up emoji.jpg" id="3_ugfpq"]
 [ext_resource type="Texture2D" uid="uid://buvcunw3s0sdh" path="res://assets/texture_08.png" id="4_kgxj6"]
 [ext_resource type="Texture2D" uid="uid://dgn8k2s00h5q0" path="res://assets/texture_06.png" id="5_57tp1"]
-[ext_resource type="Texture2D" uid="uid://4lr5db4nkbus" path="res://assets/panda without black spots.jpg" id="5_vavko"]
 [ext_resource type="Texture2D" uid="uid://ckvfrkfnya75u" path="res://assets/texture_07.png" id="6_e1l6f"]
-[ext_resource type="Texture2D" uid="uid://db687hnx7vm3y" path="res://assets/cat xmas.jpg" id="6_kfok4"]
-[ext_resource type="Texture2D" uid="uid://carquh70h35l1" path="res://assets/texture_10.png" id="7_wja4x"]
 [ext_resource type="PackedScene" uid="uid://cxfqs7qfqjitg" path="res://Interact/interact_ray.tscn" id="8_bsgvl"]
 [ext_resource type="PackedScene" uid="uid://6adv5vibvwbo" path="res://map.tscn" id="9_voa8d"]
 [ext_resource type="Texture2D" uid="uid://bsisbait5e8ns" path="res://assets/texture_04.png" id="11_oaa88"]
 [ext_resource type="Texture2D" uid="uid://2kv4xvgxt7n8" path="res://assets/texture_13.png" id="11_syatt"]
 [ext_resource type="Texture2D" uid="uid://jyfs5vlt53lo" path="res://assets/texture_01.png" id="12_a87ev"]
 [ext_resource type="Texture2D" uid="uid://cx4wphu7y3g06" path="res://assets/texture_02.png" id="13_cq3k4"]
-[ext_resource type="PackedScene" uid="uid://dfwacre12lqrt" path="res://Key.tscn" id="15_3f5v7"]
-[ext_resource type="PackedScene" uid="uid://bx5oq3p85gxlc" path="res://Lockbox.tscn" id="16_6iraf"]
-[ext_resource type="Script" path="res://KeyCollect/SecretDoor.gd" id="22_3xkho"]
+[ext_resource type="PackedScene" uid="uid://dfl76ewfy5bd0" path="res://Key.tscn" id="15_3f5v7"]
+[ext_resource type="PackedScene" uid="uid://cihi08d1ww2e5" path="res://Lockbox.tscn" id="16_6iraf"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7qacm"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -36,18 +30,13 @@ sky = SubResource("Sky_a0xa0")
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jp2ym"]
-albedo_texture = ExtResource("2_7crnl")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xyb8v"]
+albedo_texture = ExtResource("1_1d2dj")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lw3te"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dqw0f"]
-albedo_texture = ExtResource("3_ugfpq")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m15jl"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wyxs0"]
-albedo_texture = ExtResource("12_a87ev")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xsi82"]
+albedo_texture = ExtResource("1_1d2dj")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ilsmh"]
 
@@ -59,10 +48,9 @@ albedo_texture = ExtResource("12_a87ev")
 albedo_texture = ExtResource("3_tmsol")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_awc28"]
-albedo_color = Color(0.329158, 0.329158, 0.329158, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_glupv"]
-albedo_texture = ExtResource("5_vavko")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fpgjm"]
+albedo_texture = ExtResource("6_e1l6f")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q5c1l"]
 albedo_texture = ExtResource("11_syatt")
@@ -77,8 +65,8 @@ albedo_texture = ExtResource("1_1d2dj")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_huahb"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xy07w"]
-albedo_texture = ExtResource("6_kfok4")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pj3p7"]
+albedo_texture = ExtResource("6_e1l6f")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_humhp"]
 albedo_texture = ExtResource("11_syatt")
@@ -90,11 +78,6 @@ albedo_texture = ExtResource("11_syatt")
 albedo_texture = ExtResource("2_d6h6u")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3te7m"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_42534"]
-albedo_texture = ExtResource("7_wja4x")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ula40"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fm7qt"]
 albedo_texture = ExtResource("3_tmsol")
@@ -174,17 +157,6 @@ albedo_texture = ExtResource("13_cq3k4")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rpxxo"]
 albedo_color = Color(1, 0, 1, 1)
 
-[sub_resource type="QuadMesh" id="QuadMesh_0q08y"]
-size = Vector2(2, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2dia5"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yilln"]
-albedo_texture = ExtResource("5_vavko")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w3t6n"]
-albedo_texture = ExtResource("12_a87ev")
-
 [node name="Playspace" type="Node3D"]
 script = ExtResource("1_pa45p")
 
@@ -199,32 +171,15 @@ shadow_enabled = true
 
 [node name="MainRoomSpace" type="CSGBox3D" parent="MainRoom"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.375856, -0.0286499, 0.0444359)
-material_override = SubResource("StandardMaterial3D_jp2ym")
+material_override = SubResource("StandardMaterial3D_xyb8v")
 use_collision = true
 flip_faces = true
 size = Vector3(8.37097, 3, 12.1564)
 material = SubResource("StandardMaterial3D_lw3te")
 
-[node name="Outside" type="CSGBox3D" parent="MainRoom/MainRoomSpace"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.26368, -0.451634, -5.37709)
-flip_faces = true
-size = Vector3(0.177399, 1.38208, 1)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="MainRoom/MainRoomSpace/Outside"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.29434, 1.10599, -2.0304)
-flip_faces = true
-size = Vector3(6.5549, 3.59406, 5.78052)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="MainRoom/MainRoomSpace"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.45924, -3.5952, 2.41635)
-material_override = SubResource("StandardMaterial3D_dqw0f")
-flip_faces = true
-size = Vector3(0.674438, 4.19168, 0.705627)
-material = SubResource("StandardMaterial3D_m15jl")
-
 [node name="Buildingpart" type="CSGBox3D" parent="MainRoom"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.86368, -0.0572997, 3.63819)
-material_override = SubResource("StandardMaterial3D_wyxs0")
+material_override = SubResource("StandardMaterial3D_xsi82")
 use_collision = true
 size = Vector3(3.93097, 3, 4.95923)
 material = SubResource("StandardMaterial3D_ilsmh")
@@ -253,7 +208,7 @@ material = SubResource("StandardMaterial3D_awc28")
 
 [node name="board" type="CSGBox3D" parent="MainRoom/Buildingpart/Room/RoomStuff"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.80436, -0.748474, 2.48954)
-material_override = SubResource("StandardMaterial3D_glupv")
+material_override = SubResource("StandardMaterial3D_fpgjm")
 use_collision = true
 size = Vector3(0.0119933, 0.677078, 1.19351)
 material = SubResource("StandardMaterial3D_awc28")
@@ -311,7 +266,7 @@ material = SubResource("StandardMaterial3D_awc28")
 
 [node name="board" type="CSGBox3D" parent="MainRoom/Buildingpart/Room2/RoomStuff2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.80436, -0.748474, 2.48954)
-material_override = SubResource("StandardMaterial3D_xy07w")
+material_override = SubResource("StandardMaterial3D_pj3p7")
 use_collision = true
 size = Vector3(0.0119933, 0.677078, 1.19351)
 material = SubResource("StandardMaterial3D_awc28")
@@ -351,275 +306,9 @@ use_collision = true
 size = Vector3(1.05688, 0.358765, 1.41498)
 material = SubResource("StandardMaterial3D_3te7m")
 
-[node name="Outside Props" type="Node3D" parent="MainRoom"]
-
-[node name="Chair" type="CSGCombiner3D" parent="MainRoom/Outside Props"]
-
-[node name="Chair" type="CSGBox3D" parent="MainRoom/Outside Props/Chair"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.65493, -0.521639, -6.66069)
-material_override = SubResource("StandardMaterial3D_42534")
-use_collision = true
-size = Vector3(0.100067, 0.542488, 0.531372)
-material = SubResource("StandardMaterial3D_ula40")
-
-[node name="Chair2" type="CSGBox3D" parent="MainRoom/Outside Props/Chair"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8696, -0.978499, -6.66069)
-material_override = SubResource("StandardMaterial3D_42534")
-use_collision = true
-size = Vector3(0.534538, 0.385651, 0.531372)
-material = SubResource("StandardMaterial3D_ula40")
-
-[node name="Chair3" type="CSGBox3D" parent="MainRoom/Outside Props/Chair/Chair2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00352383, 0.0137138, 0)
-material_override = SubResource("StandardMaterial3D_42534")
-operation = 2
-use_collision = true
-size = Vector3(0.406462, 0.273109, 0.531372)
-material = SubResource("StandardMaterial3D_ula40")
-
-[node name="Chair3" type="CSGBox3D" parent="MainRoom/Outside Props/Chair"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.91826, -0.722691, -6.44087)
-material_override = SubResource("StandardMaterial3D_42534")
-use_collision = true
-size = Vector3(0.437729, 0.140385, 0.0917358)
-material = SubResource("StandardMaterial3D_ula40")
-
-[node name="Chair4" type="CSGBox3D" parent="MainRoom/Outside Props/Chair"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.91826, -0.722691, -6.88034)
-material_override = SubResource("StandardMaterial3D_42534")
-use_collision = true
-size = Vector3(0.437729, 0.140385, 0.0917358)
-material = SubResource("StandardMaterial3D_ula40")
-
-[node name="Table" type="CSGCombiner3D" parent="MainRoom/Outside Props"]
-
-[node name="Table" type="CSGBox3D" parent="MainRoom/Outside Props/Table"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.05438, -0.898844, -6.66069)
-material_override = SubResource("StandardMaterial3D_42534")
-use_collision = true
-size = Vector3(0.718491, 0.542488, 0.531372)
-material = SubResource("StandardMaterial3D_ula40")
-
-[node name="Table" type="CSGBox3D" parent="MainRoom/Outside Props/Table/Table"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00522041, -0.0433979, 0)
-material_override = SubResource("StandardMaterial3D_42534")
-operation = 2
-use_collision = true
-size = Vector3(0.573544, 0.455692, 0.531372)
-material = SubResource("StandardMaterial3D_ula40")
-
-[node name="Chair2" type="CSGCombiner3D" parent="MainRoom/Outside Props"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.00031)
-
-[node name="Chair" type="CSGBox3D" parent="MainRoom/Outside Props/Chair2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.65493, -0.521639, -6.66069)
-material_override = SubResource("StandardMaterial3D_42534")
-use_collision = true
-size = Vector3(0.100067, 0.542488, 0.531372)
-material = SubResource("StandardMaterial3D_ula40")
-
-[node name="Chair2" type="CSGBox3D" parent="MainRoom/Outside Props/Chair2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8696, -0.978499, -6.66069)
-material_override = SubResource("StandardMaterial3D_42534")
-use_collision = true
-size = Vector3(0.534538, 0.385651, 0.531372)
-material = SubResource("StandardMaterial3D_ula40")
-
-[node name="Chair3" type="CSGBox3D" parent="MainRoom/Outside Props/Chair2/Chair2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00352383, 0.0137138, 0)
-material_override = SubResource("StandardMaterial3D_42534")
-operation = 2
-use_collision = true
-size = Vector3(0.406462, 0.273109, 0.531372)
-material = SubResource("StandardMaterial3D_ula40")
-
-[node name="Chair3" type="CSGBox3D" parent="MainRoom/Outside Props/Chair2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.91826, -0.722691, -6.44087)
-material_override = SubResource("StandardMaterial3D_42534")
-use_collision = true
-size = Vector3(0.437729, 0.140385, 0.0917358)
-material = SubResource("StandardMaterial3D_ula40")
-
-[node name="Chair4" type="CSGBox3D" parent="MainRoom/Outside Props/Chair2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.91826, -0.722691, -6.88034)
-material_override = SubResource("StandardMaterial3D_42534")
-use_collision = true
-size = Vector3(0.437729, 0.140385, 0.0917358)
-material = SubResource("StandardMaterial3D_ula40")
-
-[node name="Table2" type="CSGCombiner3D" parent="MainRoom/Outside Props"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.00031)
-
-[node name="Table" type="CSGBox3D" parent="MainRoom/Outside Props/Table2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.05438, -0.898844, -6.66069)
-material_override = SubResource("StandardMaterial3D_42534")
-use_collision = true
-size = Vector3(0.718491, 0.542488, 0.531372)
-material = SubResource("StandardMaterial3D_ula40")
-
-[node name="Table" type="CSGBox3D" parent="MainRoom/Outside Props/Table2/Table"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00522041, -0.0433979, 0)
-material_override = SubResource("StandardMaterial3D_42534")
-operation = 2
-use_collision = true
-size = Vector3(0.573544, 0.455692, 0.531372)
-material = SubResource("StandardMaterial3D_ula40")
-
-[node name="Chair3" type="CSGCombiner3D" parent="MainRoom/Outside Props"]
-transform = Transform3D(-0.999957, 0, -0.00931984, 0, 1, 0, 0.00931984, 0, -0.999957, -15.749, 0, -15.2308)
-
-[node name="Chair" type="CSGBox3D" parent="MainRoom/Outside Props/Chair3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.65493, -0.521639, -6.66069)
-material_override = SubResource("StandardMaterial3D_42534")
-use_collision = true
-size = Vector3(0.100067, 0.542488, 0.531372)
-material = SubResource("StandardMaterial3D_ula40")
-
-[node name="Chair2" type="CSGBox3D" parent="MainRoom/Outside Props/Chair3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8696, -0.978499, -6.66069)
-material_override = SubResource("StandardMaterial3D_42534")
-use_collision = true
-size = Vector3(0.534538, 0.385651, 0.531372)
-material = SubResource("StandardMaterial3D_ula40")
-
-[node name="Chair3" type="CSGBox3D" parent="MainRoom/Outside Props/Chair3/Chair2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00352383, 0.0137138, 0)
-material_override = SubResource("StandardMaterial3D_42534")
-operation = 2
-use_collision = true
-size = Vector3(0.406462, 0.273109, 0.531372)
-material = SubResource("StandardMaterial3D_ula40")
-
-[node name="Chair3" type="CSGBox3D" parent="MainRoom/Outside Props/Chair3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.91826, -0.722691, -6.44087)
-material_override = SubResource("StandardMaterial3D_42534")
-use_collision = true
-size = Vector3(0.437729, 0.140385, 0.0917358)
-material = SubResource("StandardMaterial3D_ula40")
-
-[node name="Chair4" type="CSGBox3D" parent="MainRoom/Outside Props/Chair3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.91826, -0.722691, -6.88034)
-material_override = SubResource("StandardMaterial3D_42534")
-use_collision = true
-size = Vector3(0.437729, 0.140385, 0.0917358)
-material = SubResource("StandardMaterial3D_ula40")
-
-[node name="Table3" type="CSGCombiner3D" parent="MainRoom/Outside Props"]
-transform = Transform3D(-0.999957, 0, -0.00931984, 0, 1, 0, 0.00931984, 0, -0.999957, -15.749, 0, -15.2308)
-
-[node name="Table" type="CSGBox3D" parent="MainRoom/Outside Props/Table3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.05438, -0.898844, -6.66069)
-material_override = SubResource("StandardMaterial3D_42534")
-use_collision = true
-size = Vector3(0.718491, 0.542488, 0.531372)
-material = SubResource("StandardMaterial3D_ula40")
-
-[node name="Table" type="CSGBox3D" parent="MainRoom/Outside Props/Table3/Table"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00522041, -0.0433979, 0)
-material_override = SubResource("StandardMaterial3D_42534")
-operation = 2
-use_collision = true
-size = Vector3(0.573544, 0.455692, 0.531372)
-material = SubResource("StandardMaterial3D_ula40")
-
-[node name="Chair4" type="CSGCombiner3D" parent="MainRoom/Outside Props"]
-transform = Transform3D(-0.999957, 0, -0.00931984, 0, 1, 0, 0.00931984, 0, -0.999957, -15.7303, 0, -13.2306)
-
-[node name="Chair" type="CSGBox3D" parent="MainRoom/Outside Props/Chair4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.65493, -0.521639, -6.66069)
-material_override = SubResource("StandardMaterial3D_42534")
-use_collision = true
-size = Vector3(0.100067, 0.542488, 0.531372)
-material = SubResource("StandardMaterial3D_ula40")
-
-[node name="Chair2" type="CSGBox3D" parent="MainRoom/Outside Props/Chair4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8696, -0.978499, -6.66069)
-material_override = SubResource("StandardMaterial3D_42534")
-use_collision = true
-size = Vector3(0.534538, 0.385651, 0.531372)
-material = SubResource("StandardMaterial3D_ula40")
-
-[node name="Chair3" type="CSGBox3D" parent="MainRoom/Outside Props/Chair4/Chair2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00352383, 0.0137138, 0)
-material_override = SubResource("StandardMaterial3D_42534")
-operation = 2
-use_collision = true
-size = Vector3(0.406462, 0.273109, 0.531372)
-material = SubResource("StandardMaterial3D_ula40")
-
-[node name="Chair3" type="CSGBox3D" parent="MainRoom/Outside Props/Chair4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.91826, -0.722691, -6.44087)
-material_override = SubResource("StandardMaterial3D_42534")
-use_collision = true
-size = Vector3(0.437729, 0.140385, 0.0917358)
-material = SubResource("StandardMaterial3D_ula40")
-
-[node name="Chair4" type="CSGBox3D" parent="MainRoom/Outside Props/Chair4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.91826, -0.722691, -6.88034)
-material_override = SubResource("StandardMaterial3D_42534")
-use_collision = true
-size = Vector3(0.437729, 0.140385, 0.0917358)
-material = SubResource("StandardMaterial3D_ula40")
-
-[node name="Table4" type="CSGCombiner3D" parent="MainRoom/Outside Props"]
-transform = Transform3D(-0.999957, 0, -0.00931984, 0, 1, 0, 0.00931984, 0, -0.999957, -15.7303, 0, -13.2306)
-
-[node name="Table" type="CSGBox3D" parent="MainRoom/Outside Props/Table4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.05438, -0.898844, -6.66069)
-material_override = SubResource("StandardMaterial3D_42534")
-use_collision = true
-size = Vector3(0.718491, 0.542488, 0.531372)
-material = SubResource("StandardMaterial3D_ula40")
-
-[node name="Table" type="CSGBox3D" parent="MainRoom/Outside Props/Table4/Table"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00522041, -0.0433979, 0)
-material_override = SubResource("StandardMaterial3D_42534")
-operation = 2
-use_collision = true
-size = Vector3(0.573544, 0.455692, 0.531372)
-material = SubResource("StandardMaterial3D_ula40")
-
-[node name="Table5" type="CSGCombiner3D" parent="MainRoom/Outside Props"]
-transform = Transform3D(-0.999957, 0, -0.00931984, 0, 1, 0, 0.00931984, 0, -0.999957, -17.0044, 0, -14.209)
-
-[node name="Table" type="CSGBox3D" parent="MainRoom/Outside Props/Table5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.05438, -0.898844, -6.66069)
-material_override = SubResource("StandardMaterial3D_42534")
-use_collision = true
-size = Vector3(0.718491, 0.542488, 0.531372)
-material = SubResource("StandardMaterial3D_ula40")
-
-[node name="Table" type="CSGBox3D" parent="MainRoom/Outside Props/Table5/Table"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00522041, -0.0433979, 0)
-material_override = SubResource("StandardMaterial3D_42534")
-operation = 2
-use_collision = true
-size = Vector3(0.573544, 0.455692, 0.531372)
-material = SubResource("StandardMaterial3D_ula40")
-
-[node name="Table6" type="CSGCombiner3D" parent="MainRoom/Outside Props"]
-transform = Transform3D(-0.999957, 0, -0.00931984, 0, 1, 0, 0.00931984, 0, -0.999957, -13.0062, 0, -14.209)
-
-[node name="Table" type="CSGBox3D" parent="MainRoom/Outside Props/Table6"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.05438, -0.898844, -6.66069)
-material_override = SubResource("StandardMaterial3D_42534")
-use_collision = true
-size = Vector3(0.718491, 0.542488, 0.531372)
-material = SubResource("StandardMaterial3D_ula40")
-
-[node name="Table" type="CSGBox3D" parent="MainRoom/Outside Props/Table6/Table"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00522041, -0.0433979, 0)
-material_override = SubResource("StandardMaterial3D_42534")
-operation = 2
-use_collision = true
-size = Vector3(0.573544, 0.455692, 0.531372)
-material = SubResource("StandardMaterial3D_ula40")
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="MainRoom"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.07643, -5.36187, 2.46318)
-material_override = SubResource("StandardMaterial3D_dqw0f")
-size = Vector3(0.674438, 0.658333, 0.705627)
-material = SubResource("StandardMaterial3D_m15jl")
+[node name="CSGBox3D" type="CSGBox3D" parent="MainRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.04132, -0.480284, -5.33265)
+size = Vector3(0.960449, 1.38208, 1)
 
 [node name="Divider Tables" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0378451, 0, 0)
@@ -962,7 +651,7 @@ mesh = SubResource("CapsuleMesh_0qlw3")
 shape = SubResource("CapsuleShape3D_33eik")
 
 [node name="Neck" type="Node3D" parent="Player"]
-transform = Transform3D(-0.00458715, 0.00109182, -0.999989, -0.0040971, 0.999991, 0.00111059, 0.999981, 0.00410214, -0.00458264, 0, 0.307882, 0)
+transform = Transform3D(0.999981, 0.00410214, -0.0045826, -0.0040971, 0.999991, 0.00111059, 0.00458711, -0.00109182, 0.999989, 0, 0.307882, 0)
 
 [node name="PlayerCamera" type="Camera3D" parent="Player/Neck"]
 
@@ -1035,8 +724,7 @@ size = Vector3(0.352264, 0.319488, 0.0744325)
 transform = Transform3D(-1, -8.74228e-08, 0, -3.82137e-15, 4.37114e-08, -1, 8.74228e-08, -1, -4.37114e-08, 3.79797, -0.426677, -0.415473)
 
 [node name="MapCamera" type="Camera3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.16886, -0.386644, -0.443393)
-fov = 60.0
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.74107, -0.386644, -0.443393)
 
 [node name="Shelf" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.36308, -0.979758, -5.80955)
@@ -1198,6 +886,8 @@ material_override = SubResource("StandardMaterial3D_460dy")
 use_collision = true
 size = Vector3(0.106567, 0.824463, 0.462769)
 
+[node name="Node3D" type="Node3D" parent="."]
+
 [node name="Lockbox" parent="." instance=ExtResource("16_6iraf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.91414, -0.836231, -2.93663)
 
@@ -1211,6 +901,22 @@ obj_prompt = "Deposit Key"
 transform = Transform3D(1, 0, 0, 0, 1, 1.06581e-14, 0, -1.06581e-14, 1, -0.063272, 0.178302, -0.124911)
 
 [node name="Keys" type="Node3D" parent="."]
+
+[node name="Key" parent="Keys" groups=["grab"] instance=ExtResource("15_3f5v7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.85008, -1.32104, -2.97624)
+
+[node name="Key3D" parent="Keys/Key" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.525706, 0.276945, 0)
+disable_mode = 1
+gravity_scale = 0.0
+
+[node name="CollisionShape3D" parent="Keys/Key/Key3D" index="1"]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
+
+[node name="KeyIndi" type="CSGBox3D" parent="Keys/Key/Key3D" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.16713, 0.3092, 2.42264)
+size = Vector3(0.0281982, 0.045166, 0.0476685)
+material = SubResource("StandardMaterial3D_rpxxo")
 
 [node name="Key2" parent="Keys" groups=["grab"] instance=ExtResource("15_3f5v7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.81969, -0.639732, 5.67061)
@@ -1240,6 +946,22 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
 
 [node name="KeyIndi3" type="CSGBox3D" parent="Keys/Key3/Key3D" index="2"]
 transform = Transform3D(0.0290054, -0.999489, 0.0133595, 0.989695, 0.0268412, -0.140648, 0.140218, 0.0173014, 0.989969, -0.693475, 3.46873, 5.59549)
+size = Vector3(0.0281982, 0.045166, 0.0476685)
+material = SubResource("StandardMaterial3D_rpxxo")
+
+[node name="Key4" parent="Keys" groups=["grab"] instance=ExtResource("15_3f5v7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.961333, -1.32104, -3.69168)
+
+[node name="Key3D" parent="Keys/Key4" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0211908, 0.354353, 0)
+disable_mode = 1
+gravity_scale = 0.0
+
+[node name="CollisionShape3D" parent="Keys/Key4/Key3D" index="1"]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
+
+[node name="KeyIndi4" type="CSGBox3D" parent="Keys/Key4/Key3D" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8512, 0.665577, 3.08839)
 size = Vector3(0.0281982, 0.045166, 0.0476685)
 material = SubResource("StandardMaterial3D_rpxxo")
 
@@ -1273,6 +995,21 @@ transform = Transform3D(0.0383006, 2.97805e-08, -0.999266, 0.999099, 0.0182901, 
 size = Vector3(0.0281982, 0.045166, 0.0476685)
 material = SubResource("StandardMaterial3D_rpxxo")
 
+[node name="Key7" parent="Keys" groups=["grab"] instance=ExtResource("15_3f5v7")]
+transform = Transform3D(1, 0, 0, 0, 6.98129e-05, -1, 0, 1, 6.98129e-05, 3.57706, -0.342374, -3.5013)
+
+[node name="Key3D" parent="Keys/Key7" index="0"]
+disable_mode = 1
+gravity_scale = 0.0
+
+[node name="CollisionShape3D" parent="Keys/Key7/Key3D" index="1"]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
+
+[node name="KeyIndi7" type="CSGBox3D" parent="Keys/Key7/Key3D" index="2"]
+transform = Transform3D(1, 0, 0, 0, 6.98129e-05, 1, 0, -1, 6.98129e-05, 0.235475, 2.84514, -0.271403)
+size = Vector3(0.0281982, 0.045166, 0.0476685)
+material = SubResource("StandardMaterial3D_rpxxo")
+
 [node name="Key8" parent="Keys" groups=["grab"] instance=ExtResource("15_3f5v7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.01939, -0.684018, -5.04229)
 
@@ -1288,94 +1025,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.793792, 0.519606, 4.33334)
 size = Vector3(0.0281982, 0.045166, 0.0476685)
 material = SubResource("StandardMaterial3D_rpxxo")
 
-[node name="Key" parent="Keys" groups=["grab"] instance=ExtResource("15_3f5v7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.1818, -1.32104, -7.64427)
-
-[node name="Key3D" parent="Keys/Key" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.67782, 0.276945, 1.02913)
-disable_mode = 1
-gravity_scale = 0.0
-
-[node name="CollisionShape3D" parent="Keys/Key/Key3D" index="1"]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
-
-[node name="KeyIndi" type="CSGBox3D" parent="Keys/Key/Key3D" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.16713, 0.3092, 2.42264)
-size = Vector3(0.0281982, 0.045166, 0.0476685)
-material = SubResource("StandardMaterial3D_rpxxo")
-
-[node name="Key4" parent="Keys" groups=["grab"] instance=ExtResource("15_3f5v7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.77855, -1.32104, -9.50511)
-
-[node name="Key3D" parent="Keys/Key4" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.096489, 0.376353, 1.83713)
-disable_mode = 1
-gravity_scale = 0.0
-
-[node name="CollisionShape3D" parent="Keys/Key4/Key3D" index="1"]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
-
-[node name="KeyIndi4" type="CSGBox3D" parent="Keys/Key4/Key3D" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8512, 0.665577, 3.08839)
-size = Vector3(0.0281982, 0.045166, 0.0476685)
-material = SubResource("StandardMaterial3D_rpxxo")
-
-[node name="Key7" parent="Keys" groups=["grab"] instance=ExtResource("15_3f5v7")]
-transform = Transform3D(1, 0, 0, 0, 6.98129e-05, -1, 0, 1, 6.98129e-05, -5.73482, -0.765337, -8.72683)
-
-[node name="Key3D" parent="Keys/Key7" index="0"]
-disable_mode = 1
-gravity_scale = 0.0
-
-[node name="CollisionShape3D" parent="Keys/Key7/Key3D" index="1"]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
-
-[node name="KeyIndi7" type="CSGBox3D" parent="Keys/Key7/Key3D" index="2"]
-transform = Transform3D(1, 0, 0, 0, 6.98129e-05, 1, 0, -1, 6.98129e-05, -1.37991, -1.31774, -0.271694)
-size = Vector3(0.0281982, 0.045166, 0.0476685)
-material = SubResource("StandardMaterial3D_rpxxo")
-
-[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.96556, -0.38839, -0.445496)
-mesh = SubResource("QuadMesh_0q08y")
-material = SubResource("StandardMaterial3D_2dia5")
-
-[node name="Map2" parent="." instance=ExtResource("9_voa8d")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -7.68689, -0.341273, -10.2438)
-
-[node name="MapCamera2" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.73864, -0.386644, -10.3996)
-fov = 60.0
-
-[node name="CSGMesh3D2" type="CSGMesh3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.54628, -0.38839, -11.1999)
-material_override = SubResource("StandardMaterial3D_yilln")
-mesh = SubResource("QuadMesh_0q08y")
-material = SubResource("StandardMaterial3D_2dia5")
-
-[node name="FakeFloor" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.08338, -1.58587, 2.46079)
-material_override = SubResource("StandardMaterial3D_w3t6n")
-size = Vector3(0.674438, 0.11573, 0.705627)
-material = SubResource("StandardMaterial3D_m15jl")
-
-[node name="Door" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.61105, -0.480284, -5.33265)
-material_override = SubResource("StandardMaterial3D_42534")
-use_collision = true
-size = Vector3(0.149353, 1.38208, 1)
-material = SubResource("StandardMaterial3D_ula40")
-script = ExtResource("22_3xkho")
-
 [connection signal="interacted" from="Map" to="." method="_on_map_interaction"]
-[connection signal="interacted" from="Lockbox/Lockbox3D" to="." method="_on_lockbox_3d_interacted"]
+[connection signal="interacted" from="Lockbox/Lockbox3D" to="Lockbox/Lockbox3D" method="_on_interacted"]
 
 [editable path="Lockbox"]
+[editable path="Keys/Key"]
 [editable path="Keys/Key2"]
 [editable path="Keys/Key3"]
+[editable path="Keys/Key4"]
 [editable path="Keys/Key5"]
 [editable path="Keys/Key6"]
-[editable path="Keys/Key8"]
-[editable path="Keys/Key"]
-[editable path="Keys/Key4"]
 [editable path="Keys/Key7"]
+[editable path="Keys/Key8"]
