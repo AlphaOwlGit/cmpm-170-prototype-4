@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dfl76ewfy5bd0"]
+[gd_scene load_steps=6 format=3 uid="uid://dfl76ewfy5bd0"]
 
 [ext_resource type="Script" path="res://KeyCollect/Key.gd" id="1_umfbx"]
+[ext_resource type="AudioStream" uid="uid://b2ey7hkgqchgo" path="res://assets/Congratulations_Tomie.mp3" id="2_jev1q"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_48iki"]
 radius = 0.05
@@ -27,5 +28,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_cm8qo")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Key3D"]
 shape = SubResource("CapsuleShape3D_bjeci")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Key3D"]
+stream = ExtResource("2_jev1q")
 
 [connection signal="interacted" from="Key3D" to="Key3D" method="_on_interacted"]

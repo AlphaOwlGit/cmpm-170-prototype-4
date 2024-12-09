@@ -1,14 +1,13 @@
 extends Interactable
+class_name Lockbox
 
 func _on_interacted(_body:):
-	if GameState.get_value("key"):
+	if GameState.get_value("key") > 0:
 		GameState.set_value("keyNumber", GameState.get_value("keyNumber") + 1)
+		GameState.set_value("key", GameState.get_value("key") - 1)
+		GameState.set_value("holding_key", false)
 		print(GameState.get_value("keyNumber"))
-		var key = GameState.get_value("key")
-		GameState.get_value("key").queue_free()
-		GameState.set_value("key", null)
-		
-		
+		$AudioStreamPlayer3D.play()
 
 # Implementing interaction and deposit with Lockbox (in progress), check code
 

@@ -1,4 +1,5 @@
 extends Interactable
+class_name Key
 
 #@onready var player = $Player
 #@onready var indicator = $KeyIndi
@@ -8,10 +9,13 @@ extends Interactable
 #@onready var point = $"../Hold"
 
 func _on_interacted(_body:):
-	pass
-	#GameState.set_value("keyNumber", GameState.get_value("keyNumber") + 1)
-	#print(GameState.get_value("keyNumber"))
-	#queue_free()
+	if GameState.get_value("key") == 0:
+		GameState.set_value("key", GameState.get_value("key") + 1)
+		print(GameState.get_value("key"))
+		$AudioStreamPlayer3D.play()
+		queue_free()
+		GameState.set_value("holding_key", true)
+		print(GameState.get_value("holding_key"))
 	
 	#if not picked_up:
 	#	# Pick up the key

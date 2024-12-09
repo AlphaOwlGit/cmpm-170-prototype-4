@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bt23qbpcxswm"]
+
+[ext_resource type="AudioStream" uid="uid://cxifqwmkksohj" path="res://assets/Nichijou OST - Koigokoro wa Dangan mo Yawarakakusuru.mp3" id="1_j806q"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("1_j806q")
+volume_db = -20.0
+autoplay = true

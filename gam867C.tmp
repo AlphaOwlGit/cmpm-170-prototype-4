@@ -1,4 +1,4 @@
-[gd_scene load_steps=90 format=3 uid="uid://bktkxunywodhh"]
+[gd_scene load_steps=89 format=3 uid="uid://bktkxunywodhh"]
 
 [ext_resource type="Texture2D" uid="uid://ctdvm4unyh003" path="res://assets/texture_05.png" id="1_1d2dj"]
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_il0d6"]
@@ -23,7 +23,6 @@
 [ext_resource type="PackedScene" uid="uid://cihi08d1ww2e5" path="res://Lockbox.tscn" id="16_6iraf"]
 [ext_resource type="Script" path="res://root_canvas.gd" id="16_aygxa"]
 [ext_resource type="Script" path="res://map.gd" id="19_hrdww"]
-[ext_resource type="AudioStream" uid="uid://b68mpjt76yap4" path="res://assets/vine boom.mp3" id="21_2uola"]
 [ext_resource type="Script" path="res://KeyCollect/SecretDoor.gd" id="22_3xkho"]
 [ext_resource type="Texture2D" uid="uid://dva768cq7m8em" path="res://assets/go outside.jpg" id="22_d6yw3"]
 [ext_resource type="Texture2D" uid="uid://mlcahkkvxx8s" path="res://assets/map 2.png" id="22_toebd"]
@@ -1063,9 +1062,6 @@ transform = Transform3D(-1, -8.74228e-08, 0, -3.82137e-15, 4.37114e-08, -1, 8.74
 script = ExtResource("19_hrdww")
 obj_prompt = "Check Hint"
 
-[node name="AudioStreamPlayer3D" parent="Map" index="2"]
-stream = ExtResource("21_2uola")
-
 [node name="Map2" parent="." instance=ExtResource("9_voa8d")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -7.68689, -0.341273, -10.2438)
 script = null
@@ -1073,9 +1069,6 @@ script = null
 [node name="MeshInstance3D" parent="Map2" index="0"]
 transform = Transform3D(-8.74228e-08, 1, -4.37114e-08, 4.37114e-08, -4.37114e-08, -1, -1, -8.74228e-08, -4.37114e-08, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_jimc5")
-
-[node name="AudioStreamPlayer3D" parent="Map2" index="2"]
-stream = ExtResource("21_2uola")
 
 [node name="MapCamera" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.73864, -0.386644, -10.3996)
@@ -1382,7 +1375,7 @@ transform = Transform3D(-4.37114e-08, 0, -1, 1, 6.98129e-05, -4.37114e-08, 6.981
 size = Vector3(0.0281982, 0.045166, 0.0476685)
 material = SubResource("StandardMaterial3D_rpxxo")
 
-[node name="SecretBlock" type="CSGMesh3D" parent="."]
+[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.96556, -0.38839, -0.445496)
 material_override = SubResource("StandardMaterial3D_i1s64")
 mesh = SubResource("QuadMesh_0q08y")
@@ -1428,7 +1421,6 @@ theme_override_font_sizes/font_size = 48
 text = "Keys Deposited: 0"
 
 [node name="YouWin" type="Label" parent="RootCanvas"]
-visible = false
 offset_left = 182.0
 offset_top = 578.0
 offset_right = 1092.0
@@ -1441,7 +1433,6 @@ horizontal_alignment = 1
 [connection signal="interacted" from="Map" to="." method="_on_map_interaction"]
 [connection signal="interacted" from="Lockbox/Lockbox3D" to="Lockbox/Lockbox3D" method="_on_interacted"]
 
-[editable path="Map"]
 [editable path="Map2"]
 [editable path="Lockbox"]
 [editable path="Keys/Key2"]

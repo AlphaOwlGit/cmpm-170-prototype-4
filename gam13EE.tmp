@@ -1,4 +1,4 @@
-[gd_scene load_steps=90 format=3 uid="uid://bktkxunywodhh"]
+[gd_scene load_steps=84 format=3 uid="uid://bktkxunywodhh"]
 
 [ext_resource type="Texture2D" uid="uid://ctdvm4unyh003" path="res://assets/texture_05.png" id="1_1d2dj"]
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_il0d6"]
@@ -21,13 +21,8 @@
 [ext_resource type="Texture2D" uid="uid://cx4wphu7y3g06" path="res://assets/texture_02.png" id="13_cq3k4"]
 [ext_resource type="PackedScene" uid="uid://dfl76ewfy5bd0" path="res://Key.tscn" id="15_3f5v7"]
 [ext_resource type="PackedScene" uid="uid://cihi08d1ww2e5" path="res://Lockbox.tscn" id="16_6iraf"]
-[ext_resource type="Script" path="res://root_canvas.gd" id="16_aygxa"]
-[ext_resource type="Script" path="res://map.gd" id="19_hrdww"]
-[ext_resource type="AudioStream" uid="uid://b68mpjt76yap4" path="res://assets/vine boom.mp3" id="21_2uola"]
 [ext_resource type="Script" path="res://KeyCollect/SecretDoor.gd" id="22_3xkho"]
-[ext_resource type="Texture2D" uid="uid://dva768cq7m8em" path="res://assets/go outside.jpg" id="22_d6yw3"]
 [ext_resource type="Texture2D" uid="uid://mlcahkkvxx8s" path="res://assets/map 2.png" id="22_toebd"]
-[ext_resource type="Script" path="res://FakeFloor.gd" id="24_jaqfb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7qacm"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -159,9 +154,6 @@ albedo_texture = ExtResource("11_oaa88")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g1dy3"]
 albedo_texture = ExtResource("6_e1l6f")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jimc5"]
-albedo_texture = ExtResource("22_toebd")
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0767y"]
 albedo_texture = ExtResource("12_a87ev")
 
@@ -186,13 +178,13 @@ albedo_texture = ExtResource("5_57tp1")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rpxxo"]
 albedo_color = Color(1, 0, 1, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i1s64"]
-albedo_texture = ExtResource("22_d6yw3")
-
 [sub_resource type="QuadMesh" id="QuadMesh_0q08y"]
 size = Vector2(2, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2dia5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jimc5"]
+albedo_texture = ExtResource("22_toebd")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yilln"]
 albedo_texture = ExtResource("5_vavko")
@@ -221,9 +213,14 @@ size = Vector3(8.37097, 3, 12.1564)
 material = SubResource("StandardMaterial3D_lw3te")
 
 [node name="Outside" type="CSGBox3D" parent="MainRoom/MainRoomSpace"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.26368, -0.450352, -5.37709)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.26368, -0.451634, -5.37709)
 flip_faces = true
-size = Vector3(0.177399, 1.37952, 1)
+size = Vector3(0.177399, 1.38208, 1)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="MainRoom/MainRoomSpace/Outside"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.29434, 1.10599, -2.0304)
+flip_faces = true
+size = Vector3(6.5549, 3.59406, 5.78052)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="MainRoom/MainRoomSpace"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.45924, -3.5952, 2.41635)
@@ -231,11 +228,6 @@ material_override = SubResource("StandardMaterial3D_dqw0f")
 flip_faces = true
 size = Vector3(0.674438, 4.19168, 0.705627)
 material = SubResource("StandardMaterial3D_m15jl")
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="MainRoom/MainRoomSpace"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.55802, 0.654356, -7.40749)
-flip_faces = true
-size = Vector3(6.5549, 3.59406, 5.78052)
 
 [node name="Buildingpart" type="CSGBox3D" parent="MainRoom"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.86368, -0.0572997, 3.63819)
@@ -267,10 +259,10 @@ size = Vector3(1.61676, 0.553375, 0.714966)
 material = SubResource("StandardMaterial3D_awc28")
 
 [node name="board" type="CSGBox3D" parent="MainRoom/Buildingpart/Room/RoomStuff"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.80436, -0.683852, 2.5054)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.80436, -0.748474, 2.48954)
 material_override = SubResource("StandardMaterial3D_glupv")
 use_collision = true
-size = Vector3(0.0119933, 1.01512, 0.677246)
+size = Vector3(0.0119933, 0.677078, 1.19351)
 material = SubResource("StandardMaterial3D_awc28")
 
 [node name="chair" type="CSGBox3D" parent="MainRoom/Buildingpart/Room/RoomStuff"]
@@ -325,10 +317,10 @@ size = Vector3(1.61676, 0.553375, 0.714966)
 material = SubResource("StandardMaterial3D_awc28")
 
 [node name="board" type="CSGBox3D" parent="MainRoom/Buildingpart/Room2/RoomStuff2"]
-transform = Transform3D(1, 1.74846e-07, -7.64274e-15, 0, -4.37114e-08, -1, -1.74846e-07, 1, -4.37114e-08, 3.80436, -0.578129, 2.50337)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.80436, -0.748474, 2.48954)
 material_override = SubResource("StandardMaterial3D_xy07w")
 use_collision = true
-size = Vector3(0.0119933, 0.986652, 0.852821)
+size = Vector3(0.0119933, 0.677078, 1.19351)
 material = SubResource("StandardMaterial3D_awc28")
 
 [node name="chair" type="CSGBox3D" parent="MainRoom/Buildingpart/Room2/RoomStuff2"]
@@ -369,7 +361,6 @@ material = SubResource("StandardMaterial3D_3te7m")
 [node name="Outside Props" type="Node3D" parent="MainRoom"]
 
 [node name="Chair" type="CSGCombiner3D" parent="MainRoom/Outside Props"]
-use_collision = true
 
 [node name="Chair" type="CSGBox3D" parent="MainRoom/Outside Props/Chair"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.65493, -0.521639, -6.66069)
@@ -408,7 +399,6 @@ size = Vector3(0.437729, 0.140385, 0.0917358)
 material = SubResource("StandardMaterial3D_ula40")
 
 [node name="Table" type="CSGCombiner3D" parent="MainRoom/Outside Props"]
-use_collision = true
 
 [node name="Table" type="CSGBox3D" parent="MainRoom/Outside Props/Table"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.05438, -0.898844, -6.66069)
@@ -427,7 +417,6 @@ material = SubResource("StandardMaterial3D_ula40")
 
 [node name="Chair2" type="CSGCombiner3D" parent="MainRoom/Outside Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.00031)
-use_collision = true
 
 [node name="Chair" type="CSGBox3D" parent="MainRoom/Outside Props/Chair2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.65493, -0.521639, -6.66069)
@@ -467,7 +456,6 @@ material = SubResource("StandardMaterial3D_ula40")
 
 [node name="Table2" type="CSGCombiner3D" parent="MainRoom/Outside Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.00031)
-use_collision = true
 
 [node name="Table" type="CSGBox3D" parent="MainRoom/Outside Props/Table2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.05438, -0.898844, -6.66069)
@@ -486,7 +474,6 @@ material = SubResource("StandardMaterial3D_ula40")
 
 [node name="Chair3" type="CSGCombiner3D" parent="MainRoom/Outside Props"]
 transform = Transform3D(-0.999957, 0, -0.00931984, 0, 1, 0, 0.00931984, 0, -0.999957, -15.749, 0, -15.2308)
-use_collision = true
 
 [node name="Chair" type="CSGBox3D" parent="MainRoom/Outside Props/Chair3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.65493, -0.521639, -6.66069)
@@ -526,7 +513,6 @@ material = SubResource("StandardMaterial3D_ula40")
 
 [node name="Table3" type="CSGCombiner3D" parent="MainRoom/Outside Props"]
 transform = Transform3D(-0.999957, 0, -0.00931984, 0, 1, 0, 0.00931984, 0, -0.999957, -15.749, 0, -15.2308)
-use_collision = true
 
 [node name="Table" type="CSGBox3D" parent="MainRoom/Outside Props/Table3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.05438, -0.898844, -6.66069)
@@ -545,7 +531,6 @@ material = SubResource("StandardMaterial3D_ula40")
 
 [node name="Chair4" type="CSGCombiner3D" parent="MainRoom/Outside Props"]
 transform = Transform3D(-0.999957, 0, -0.00931984, 0, 1, 0, 0.00931984, 0, -0.999957, -15.7303, 0, -13.2306)
-use_collision = true
 
 [node name="Chair" type="CSGBox3D" parent="MainRoom/Outside Props/Chair4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.65493, -0.521639, -6.66069)
@@ -585,7 +570,6 @@ material = SubResource("StandardMaterial3D_ula40")
 
 [node name="Table4" type="CSGCombiner3D" parent="MainRoom/Outside Props"]
 transform = Transform3D(-0.999957, 0, -0.00931984, 0, 1, 0, 0.00931984, 0, -0.999957, -15.7303, 0, -13.2306)
-use_collision = true
 
 [node name="Table" type="CSGBox3D" parent="MainRoom/Outside Props/Table4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.05438, -0.898844, -6.66069)
@@ -604,7 +588,6 @@ material = SubResource("StandardMaterial3D_ula40")
 
 [node name="Table5" type="CSGCombiner3D" parent="MainRoom/Outside Props"]
 transform = Transform3D(-0.999957, 0, -0.00931984, 0, 1, 0, 0.00931984, 0, -0.999957, -17.0044, 0, -14.209)
-use_collision = true
 
 [node name="Table" type="CSGBox3D" parent="MainRoom/Outside Props/Table5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.05438, -0.898844, -6.66069)
@@ -623,7 +606,6 @@ material = SubResource("StandardMaterial3D_ula40")
 
 [node name="Table6" type="CSGCombiner3D" parent="MainRoom/Outside Props"]
 transform = Transform3D(-0.999957, 0, -0.00931984, 0, 1, 0, 0.00931984, 0, -0.999957, -13.0062, 0, -14.209)
-use_collision = true
 
 [node name="Table" type="CSGBox3D" parent="MainRoom/Outside Props/Table6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.05438, -0.898844, -6.66069)
@@ -643,7 +625,6 @@ material = SubResource("StandardMaterial3D_ula40")
 [node name="CSGBox3D2" type="CSGBox3D" parent="MainRoom"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.07643, -5.36187, 2.46318)
 material_override = SubResource("StandardMaterial3D_dqw0f")
-use_collision = true
 size = Vector3(0.674438, 0.658333, 0.705627)
 material = SubResource("StandardMaterial3D_m15jl")
 
@@ -991,7 +972,6 @@ shape = SubResource("CapsuleShape3D_33eik")
 transform = Transform3D(-0.00458715, 0.00109182, -0.999989, -0.0040971, 0.999991, 0.00111059, 0.999981, 0.00410214, -0.00458264, 0, 0.307882, 0)
 
 [node name="PlayerCamera" type="Camera3D" parent="Player/Neck"]
-current = true
 
 [node name="InteractRay" parent="Player/Neck" instance=ExtResource("8_bsgvl")]
 target_position = Vector3(0, 0, -1)
@@ -1060,25 +1040,9 @@ size = Vector3(0.352264, 0.319488, 0.0744325)
 
 [node name="Map" parent="." instance=ExtResource("9_voa8d")]
 transform = Transform3D(-1, -8.74228e-08, 0, -3.82137e-15, 4.37114e-08, -1, 8.74228e-08, -1, -4.37114e-08, 3.79797, -0.426677, -0.415473)
-script = ExtResource("19_hrdww")
-obj_prompt = "Check Hint"
-
-[node name="AudioStreamPlayer3D" parent="Map" index="2"]
-stream = ExtResource("21_2uola")
-
-[node name="Map2" parent="." instance=ExtResource("9_voa8d")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -7.68689, -0.341273, -10.2438)
-script = null
-
-[node name="MeshInstance3D" parent="Map2" index="0"]
-transform = Transform3D(-8.74228e-08, 1, -4.37114e-08, 4.37114e-08, -4.37114e-08, -1, -1, -8.74228e-08, -4.37114e-08, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_jimc5")
-
-[node name="AudioStreamPlayer3D" parent="Map2" index="2"]
-stream = ExtResource("21_2uola")
 
 [node name="MapCamera" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.73864, -0.386644, -10.3996)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.16886, -0.386644, -0.443393)
 fov = 60.0
 
 [node name="Shelf" type="CSGBox3D" parent="."]
@@ -1347,7 +1311,7 @@ gravity_scale = 0.0
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
 
 [node name="KeyIndi" type="CSGBox3D" parent="Keys/Key/Key3D" index="2"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.15173, 0.629259, -3.6295)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.16713, 0.3092, 2.42264)
 size = Vector3(0.0281982, 0.045166, 0.0476685)
 material = SubResource("StandardMaterial3D_rpxxo")
 
@@ -1363,7 +1327,7 @@ gravity_scale = 0.0
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
 
 [node name="KeyIndi4" type="CSGBox3D" parent="Keys/Key4/Key3D" index="2"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.9711, 0.665577, -2.57009)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8512, 0.665577, 3.08839)
 size = Vector3(0.0281982, 0.045166, 0.0476685)
 material = SubResource("StandardMaterial3D_rpxxo")
 
@@ -1378,17 +1342,27 @@ gravity_scale = 0.0
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
 
 [node name="KeyIndi7" type="CSGBox3D" parent="Keys/Key7/Key3D" index="2"]
-transform = Transform3D(-4.37114e-08, 0, -1, 1, 6.98129e-05, -4.37114e-08, 6.98129e-05, -1, -3.05162e-12, -1.70421, -1.58885, -0.618087)
+transform = Transform3D(1, 0, 0, 0, 6.98129e-05, 1, 0, -1, 6.98129e-05, -1.37991, -1.31774, -0.271694)
 size = Vector3(0.0281982, 0.045166, 0.0476685)
 material = SubResource("StandardMaterial3D_rpxxo")
 
-[node name="SecretBlock" type="CSGMesh3D" parent="."]
+[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.96556, -0.38839, -0.445496)
-material_override = SubResource("StandardMaterial3D_i1s64")
 mesh = SubResource("QuadMesh_0q08y")
 material = SubResource("StandardMaterial3D_2dia5")
 
-[node name="PandaWall" type="CSGMesh3D" parent="."]
+[node name="Map2" parent="." instance=ExtResource("9_voa8d")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -7.68689, -0.341273, -10.2438)
+
+[node name="MeshInstance3D" parent="Map2" index="0"]
+transform = Transform3D(-8.74228e-08, 1, -4.37114e-08, 4.37114e-08, -4.37114e-08, -1, -1, -8.74228e-08, -4.37114e-08, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_jimc5")
+
+[node name="MapCamera2" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.73864, -0.386644, -10.3996)
+fov = 60.0
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.54628, -0.38839, -11.1999)
 material_override = SubResource("StandardMaterial3D_yilln")
 mesh = SubResource("QuadMesh_0q08y")
@@ -1397,10 +1371,8 @@ material = SubResource("StandardMaterial3D_2dia5")
 [node name="FakeFloor" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.08338, -1.58587, 2.46079)
 material_override = SubResource("StandardMaterial3D_w3t6n")
-use_collision = true
 size = Vector3(0.674438, 0.11573, 0.705627)
 material = SubResource("StandardMaterial3D_m15jl")
-script = ExtResource("24_jaqfb")
 
 [node name="Door" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.61105, -0.480284, -5.33265)
@@ -1410,39 +1382,9 @@ size = Vector3(0.149353, 1.38208, 1)
 material = SubResource("StandardMaterial3D_ula40")
 script = ExtResource("22_3xkho")
 
-[node name="RootCanvas" type="CanvasLayer" parent="."]
-script = ExtResource("16_aygxa")
-
-[node name="KeyHave" type="Label" parent="RootCanvas"]
-offset_right = 221.0
-offset_bottom = 87.0
-theme_override_font_sizes/font_size = 48
-text = "No Key :("
-
-[node name="DepositText" type="Label" parent="RootCanvas"]
-offset_left = 857.0
-offset_top = 3.0
-offset_right = 1265.0
-offset_bottom = 90.0
-theme_override_font_sizes/font_size = 48
-text = "Keys Deposited: 0"
-
-[node name="YouWin" type="Label" parent="RootCanvas"]
-visible = false
-offset_left = 182.0
-offset_top = 578.0
-offset_right = 1092.0
-offset_bottom = 715.0
-theme_override_font_sizes/font_size = 48
-text = "You Win! Find the thumbs up!
-Check the first map for a hint to where!"
-horizontal_alignment = 1
-
 [connection signal="interacted" from="Map" to="." method="_on_map_interaction"]
-[connection signal="interacted" from="Lockbox/Lockbox3D" to="Lockbox/Lockbox3D" method="_on_interacted"]
+[connection signal="interacted" from="Lockbox/Lockbox3D" to="." method="_on_lockbox_3d_interacted"]
 
-[editable path="Map"]
-[editable path="Map2"]
 [editable path="Lockbox"]
 [editable path="Keys/Key2"]
 [editable path="Keys/Key3"]
@@ -1452,3 +1394,4 @@ horizontal_alignment = 1
 [editable path="Keys/Key"]
 [editable path="Keys/Key4"]
 [editable path="Keys/Key7"]
+[editable path="Map2"]

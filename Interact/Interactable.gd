@@ -17,3 +17,6 @@ func get_prompt():
 
 func interact(body):
 	interacted.emit(body)
+
+func _on_interacted(body: Variant) -> void:
+	pass # Replace with function body.
