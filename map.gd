@@ -2,5 +2,6 @@ extends Interactable
 class_name Map
 
 func _on_interacted(body: Variant) -> void:
-	$AudioStreamPlayer3D.play()
+	if GameState.get_value("keyNumber") == 8:
+		$AudioStreamPlayer3D.play()
 	

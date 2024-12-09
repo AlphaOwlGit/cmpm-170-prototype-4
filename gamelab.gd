@@ -16,7 +16,7 @@ func _process(delta):
 		camera2.set_current(true)
 
 func _on_map_interaction(body: Variant) -> void:
-	if camera2.is_current():
+	if GameState.get_value("keyNumber") == 8 and camera2.is_current():
 		camera2.clear_current(true)
 		camera1.set_current(true)
 	elif camera1.is_current():
